@@ -6,6 +6,7 @@ from fastapi.staticfiles import StaticFiles
 
 from app.dates import days_left
 from app.storage import load_opportunities
+from app.urgency import urgency_label
 
 STATIC_DIR = Path(__file__).parent.parent / "static"
 
@@ -26,5 +27,6 @@ def list_opportunities():
     for opportunity in load_opportunities():
         row = opportunity.model_dump(mode="json")
         row["days_left"] = days_left(opportunity.deadline)
+        row["urgency"] = urgency_label(row["days_left"])
         result.append(row)
     return result

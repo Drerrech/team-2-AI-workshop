@@ -26,6 +26,12 @@ async function renderTable() {
     const deadlineCell = addCell(row, formatDate(opportunity.deadline));
     showDeadline(row, deadlineCell, opportunity); // in deadlines.js
 
+    const urgencyCell = addCell(row, "");
+    const urgency = document.createElement("span");
+    urgency.className = "urgency";
+    urgency.textContent = opportunity.urgency;
+    urgencyCell.appendChild(urgency);
+
     const ownerCell = addCell(row, "");
     const avatar = document.createElement("span");
     avatar.className = "avatar";

@@ -3,5 +3,11 @@
 //   cell         the deadline cell (<td>)
 //   opportunity  the row's data, including days_left from the server
 function showDeadline(row, cell, opportunity) {
-  // Empty for now.
+  if (opportunity.days_left < 0) {
+    row.classList.add("deadline-overdue");
+  } else if (opportunity.days_left === 0) {
+    row.classList.add("deadline-today");
+  } else if (opportunity.days_left <= 7) {
+    row.classList.add("deadline-coming");
+  }
 }
