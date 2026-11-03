@@ -139,18 +139,6 @@ a.name:hover {
 .status-successful { background: #d3f0de; color: #14532d; }
 .status-unsuccessful { background: #fdecec; color: #991b1b; }
 
-.urgency {
-  display: inline-flex;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.urgency-due-this-week { background: #dcfce7; color: #166534; }
-.urgency-due-within-3-days { background: #fef3c7; color: #92400e; }
-.urgency-overdue { background: #fee2e2; color: #991b1b; }
-
 .footnote {
   margin: 10px 0 32px;
   font-size: 0.8rem;

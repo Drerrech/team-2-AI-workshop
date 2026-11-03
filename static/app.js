@@ -28,7 +28,7 @@ async function renderTable() {
 
     const urgencyCell = addCell(row, "");
     const urgency = document.createElement("span");
-    urgency.className = "urgency urgency-" + opportunity.urgency.replaceAll(" ", "-");
+    urgency.className = "urgency";
     urgency.textContent = opportunity.urgency;
     urgencyCell.appendChild(urgency);
 
